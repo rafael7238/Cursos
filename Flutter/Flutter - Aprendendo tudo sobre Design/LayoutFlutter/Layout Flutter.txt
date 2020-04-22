@@ -1,0 +1,126 @@
+Catálago de Widget:
+
+	Container =  Tem tudo dentro dele para criar qualquer coisa.
+		     Há todos os parametros.
+		    . O Widget filho herda os tamanhos do pai.
+		    . Quando o Container pai não tem valor, o Container filho será considerado e o tamanho do pai será o do filho
+		    . Para alinhar um texto dentro de um Container com widht e heigth, o alinhmaneto deverá ser no pai, Container
+		
+		transform: Modificamos o Container dinamicamente.
+		transform: Matrix4.identity()..scale(0.5)..translate(150.0,-100.0),	
+
+		decoration: Por padrão, recebe um BoxDecoration.
+		BoxDecoration = Colocamos a cor..por padrão, se a cor estiver no BoxDecoration, não haverá a cor no container
+			borderRadius = Cria a borda do botão, deixando a borda arredondada.
+			BoxShadow  = Cria a sobrea do Container
+
+
+	Text = Para alterar um texto para justificado ou começar pela direita ou esquerda, deverá usar o comando textAlign:
+
+	Column =    Recebe filhos.
+		    PAra cada filho, deve-se colocar a altura e largura.
+		 Container(width: double.infinity) = Serve para ocupar toda a linha
+		mainAxisAlignment: MainAxisAlignment.center, = Quer dizer que começo minha coluna no meio da tela
+		mainAxisAlignment = Alinha onde a coluna é criada
+		crossAxisAlignment = Alinha aonde a coluna ficará após o MainAxisAlignment
+
+	Padding
+
+	Row = Também aceira os mainAxisAlignment, crossAxisAlignment
+		            mainAxisAlignment: MainAxisAlignment.spaceAround = Para dar um espaçamento
+
+Expanded = Ocupar os espaços igualmente pela variável flex
+
+Dasacoplamento = Cria uma classe de cria um botão e cria os parâmetros 
+
+Images : Atributo "fit"
+	contain = Mostra tudo 
+	cover = a imagem se adequa ao tamanho
+	fiil = A imagem se adequa
+
+decorationImage:
+Container(
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("images/back.jpg"), fit: BoxFit.cover)),
+      // color: Colors.yellow,
+
+
+stack = Empilhador de Container. Um container em cima do outro
+
+
+CircleAvatar = Colocar fotos
+
+RaisedButton.icon = Button com Icone
+
+ListView = Funciona como se fosse uma column. 
+	   Já vem com o Scroll.
+	   cada Item do Children já vem expandido, em nível de largura.
+	 Para cada coluna do ListView, podemos colocar um ListTitle.
+    scrollDirection: Axis.horizontal,
+
+
+Clips  = Recortar Widget
+	 CliOver = Recortar Widget para redondo. Formato Oval
+	ClibRReact = Bordas nos Widgets. Mais retangular
+
+ClipPath = Desenhando Containers. Para criação de touchBar.
+
+Material Design = Padrão de Designer
+
+Navegação Entre Telas=  O FLutter grava como se fosse um Array
+
+	//Passar para outra tela com o botão salvar
+
+           Navigator.push(context,
+                MaterialPageRoute(builder: (BuildContext context) {
+              return Second();
+            }));
+          },
+
+         // Voltar para a tela anterior
+	 Navigator.pop(context);
+
+	//Passar para outra tela sem ter o botão salvar
+
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (BuildContext context) {
+              return Second();
+            }));
+
+
+Animações = Repetições de vários quadros em momentos diferentes.
+	Utiliza o Skia
+	Animações não são físicas. A interpolização é feita por frame e frame
+
+	Animações implícitas:
+		
+	PageView = Ficar trocando páginas por meio de polegar direita e esquerda. Paginação.
+			Chama item a item.
+	PageView.builder = Passa uma array de forma dinâmica.
+ 				Criado em tempo de execução.
+		Page Controller = Controlar a PageView
+				Dispose = dispose do controller para não pesar a aplicação
+
+O primeiro Widget de uma página sempre deverá ser o Material ou o Scanfoold
+
+O Widget EXPANDED = expande o máximo que puder
+SPACER = é como se fosse um Container vazio. Explande até onde der. Como um Expandeds com Child vazio.
+InkWell = Mesma coisa do GESTUREDETECTOR, entretanto com animação.
+
+
+Navegação
+
+
+
+MediaQuery = Ajuda para responsividade do aplicativo.
+	MediaQueryData = mediaquery MediaQuery.of(context)
+	Size size = MediaQuery.size;
+	size.width
+	size.height
+width = size.width*0.25 // coloca o Widget como metade da tela.
+
+ContraintedBox(
+	constraints: BoxConstraint(
+			minWidth MaxHei))
+

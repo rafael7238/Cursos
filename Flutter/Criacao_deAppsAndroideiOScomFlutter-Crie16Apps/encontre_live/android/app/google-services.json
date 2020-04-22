@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "937398598424",
+    "firebase_url": "https://programacao-42721.firebaseio.com",
+    "project_id": "programacao-42721",
+    "storage_bucket": "programacao-42721.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937398598424:android:7d4ed11ed383bcb1f1fc6d",
+        "android_client_info": {
+          "package_name": "com.rafaelvasconcelos.encontrelive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "937398598424-iibmhjds40pjlcms3vck9ofqstl503j3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMBXoJyhhIzsYM_l9pwRddGUDVZlxY3Pg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "937398598424-iibmhjds40pjlcms3vck9ofqstl503j3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
