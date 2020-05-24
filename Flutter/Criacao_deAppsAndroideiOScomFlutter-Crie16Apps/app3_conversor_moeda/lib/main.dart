@@ -14,9 +14,9 @@ Future<Map> getData() async {
 }
 
 
-
 void main() async {
   print(await getData());
+  
   runApp(MaterialApp(
     home: Home(),
     theme: ThemeData(
@@ -44,33 +44,31 @@ class _HomeState extends State<Home> {
   final dolarController = TextEditingController();
   final euroController = TextEditingController();
 
-void _clearAll(){
-realController.text=""; 
-dolarController.text=""; 
-euroController .text=""; 
-}
+  void _clearAll() {
+    realController.text = "";
+    dolarController.text = "";
+    euroController.text = "";
+  }
 
-  void _realChange(String text){
-    if (text.isEmpty)
-      _clearAll();
+  void _realChange(String text) {
+    if (text.isEmpty) _clearAll();
     double real = double.parse(text);
-    dolarController.text= (real/dolar).toStringAsFixed(2);
-    euroController.text = (real/euro).toStringAsFixed(2);
+    dolarController.text = (real / dolar).toStringAsFixed(2);
+    euroController.text = (real / euro).toStringAsFixed(2);
   }
-  void _dolarChange(String text){
-        if (text.isEmpty)
-      _clearAll();
-     double dolar = double.parse(text);
-    realController.text= (dolar*this.dolar).toStringAsFixed(2);
-    euroController.text = (dolar*this.dolar/euro).toStringAsFixed(2);
-  }
-  void _euroChange(String text){
-        if (text.isEmpty)
-      _clearAll();
-    double euro =  double.parse(text);
-    realController.text= (euro*this.euro).toStringAsFixed(2);
-     dolarController.text = (euro*this.euro/dolar).toStringAsFixed(2);
 
+  void _dolarChange(String text) {
+    if (text.isEmpty) _clearAll();
+    double dolar = double.parse(text);
+    realController.text = (dolar * this.dolar).toStringAsFixed(2);
+    euroController.text = (dolar * this.dolar / euro).toStringAsFixed(2);
+  }
+
+  void _euroChange(String text) {
+    if (text.isEmpty) _clearAll();
+    double euro = double.parse(text);
+    realController.text = (euro * this.euro).toStringAsFixed(2);
+    dolarController.text = (euro * this.euro / dolar).toStringAsFixed(2);
   }
 
   @override
@@ -119,11 +117,14 @@ euroController .text="";
                           size: 150.0,
                           color: Colors.amber,
                         ),
-                        buildTextField("Reais", "R\$",realController,_realChange),
+                        buildTextField(
+                            "Reais", "R\$", realController, _realChange),
                         Divider(),
-                        buildTextField("Dolares", "US\$",dolarController,_dolarChange),
+                        buildTextField(
+                            "Dolares", "US\$", dolarController, _dolarChange),
                         Divider(),
-                        buildTextField("Euros", "E",euroController,_euroChange),
+                        buildTextField(
+                            "Euros", "E", euroController, _euroChange),
                       ],
                     ),
                   );
@@ -134,20 +135,20 @@ euroController .text="";
   }
 }
 
-Widget buildTextField(String label, String prefix, TextEditingController c, Function f) {
+Widget buildTextField(
+    String label, String prefix, TextEditingController c, Function f) {
   return TextField(
-    decoration: InputDecoration(
-      labelText: label,
-      labelStyle: TextStyle(
-        color: Colors.amber,
+      decoration: InputDecoration(
+        labelText: label,
+        labelStyle: TextStyle(
+          color: Colors.amber,
+        ),
+        border: OutlineInputBorder(),
+        prefixText: prefix,
       ),
-      border: OutlineInputBorder(),
-      prefixText: prefix,
-    ),
-    style: TextStyle(color: Colors.amber, fontSize: 25.0),
-    controller: c,
-    onChanged: f,
-    onSubmitted: f,
-    keyboardType: TextInputType.number
-  );
+      style: TextStyle(color: Colors.amber, fontSize: 25.0),
+      controller: c,
+      onChanged: f,
+      onSubmitted: f,
+      keyboardType: TextInputType.number);
 }

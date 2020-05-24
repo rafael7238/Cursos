@@ -1,9 +1,0 @@
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Release\netstandard2.0\QuickBuy.Repositorio.deps.json
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Release\netstandard2.0\QuickBuy.Repositorio.dll
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Release\netstandard2.0\QuickBuy.Repositorio.pdb
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Release\netstandard2.0\QuickBuy.Repositorio.csprojAssemblyReference.cache
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Release\netstandard2.0\QuickBuy.Repositorio.csproj.CoreCompileInputs.cache
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Release\netstandard2.0\QuickBuy.Repositorio.AssemblyInfoInputs.cache
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Release\netstandard2.0\QuickBuy.Repositorio.AssemblyInfo.cs
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Release\netstandard2.0\QuickBuy.Repositorio.dll
-C:\Users\rafae\Documents\Curso\C_Sharp\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Release\netstandard2.0\QuickBuy.Repositorio.pdb
