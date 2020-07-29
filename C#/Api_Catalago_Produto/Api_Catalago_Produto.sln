@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api_Catalago_Produto", "Api_Catalago_Produto\Api_Catalago_Produto.csproj", "{B54B82A9-82E7-4337-B6E1-E70EDD735AE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B54B82A9-82E7-4337-B6E1-E70EDD735AE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54B82A9-82E7-4337-B6E1-E70EDD735AE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54B82A9-82E7-4337-B6E1-E70EDD735AE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54B82A9-82E7-4337-B6E1-E70EDD735AE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B85B38F6-B901-41D3-8E78-6F7B345E9AC5}
+	EndGlobalSection
+EndGlobal
