@@ -1,0 +1,3 @@
+#python -m venv nome_venv
+#nome_venv/script/activate
+#deactivate
