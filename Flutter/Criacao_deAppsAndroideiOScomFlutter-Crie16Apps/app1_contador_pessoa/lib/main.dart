@@ -17,12 +17,23 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     void _contador(int valor) {
       setState(() {
-        _pessoa = _pessoa + valor;
+        _pessoa += valor;
         _pessoa < 0 ? _mensagem = "Mundo inverso" : _mensagem = "Pode Entrar";
       });
     }
 
-    var flatButton = FlatButton(
+    Widget flatButton(int cont) {
+      return FlatButton(
+        child: Text(
+          cont > 0 ? "+$cont" : "$cont",
+          style: TextStyle(fontSize: 40.0, color: Colors.white),
+        ),
+        onPressed: () {
+          _contador(cont);
+        },
+      );
+    }
+    /* var flatButton = FlatButton(
       child: Text(
         "+1",
         style: TextStyle(fontSize: 40.0, color: Colors.white),
@@ -30,7 +41,8 @@ class _HomeState extends State<Home> {
       onPressed: () {
         _contador(1);
       },
-    );
+    );*/
+
     return Stack(
       children: [
         Image.asset(
@@ -54,16 +66,11 @@ class _HomeState extends State<Home> {
                 children: [
                   Padding(
                     padding: EdgeInsets.all(10),
-                    child: flatButton,
+                    child: flatButton(1),
                   ),
-                  FlatButton(
-                      child: Text(
-                        "-1",
-                        style: TextStyle(fontSize: 40.0, color: Colors.white),
-                      ),
-                      onPressed: () {
-                        _contador(-1);
-                      })
+                  Container(
+                    child: flatButton(-1),
+                  )
                 ],
               ),
               Text(

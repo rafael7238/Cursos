@@ -31,7 +31,8 @@ Scaffold
 
 AppBar
 
-SingleChildScrollView
+SingleChildScrollView -> Rolar a tela para cima e para baixo.
+				Possui parametro Padding
 
 RaisedButton
 
@@ -56,6 +57,7 @@ Future
 FutureBuilder
 
 App #4 - Lista de Tarefas
+	Path_provider = Package para ler arquivos Json em Android e IOS
 
 ListView
 

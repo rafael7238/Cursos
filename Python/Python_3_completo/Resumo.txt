@@ -1,3 +1,31 @@
 #python -m venv nome_venv
 #nome_venv/script/activate
 #deactivate
+
+
+
+DJANGO
+	Acessar a máquina virtual
+	pip install django
+	pip install django==2.2.3
+	django-admin startproject projeto .
+	python manage.py runserver
+
+	python manage.py startapp blog
+
+	Sempre que cria um App no Django, tem que registrar em dois lugares. 
+		Settings.py - INSTALLED APPS
+		URLS.py
+
+	python manage.py startapp Produto
+		1° = Na pasta principal, abrir o Setting.py e registrar o aplicativo no INSTALLED_APPS
+		2° = Abrir o urls.py e inserir a rota
+	python manage.py startapp Categoria
+
+
+	__init__.py = Possui nada. Apenas informa que é um pacote Python 
+	setting.py = Todas as configurações do projeto. Um dos mais importantes
+		Possui o INSTALL_APPS:. Temos que pensar que para o Django, cada menu é um App(Sessões) diferente.
+					Em um site, o SOBRE, BLOG, PRODUTOS
+	urls.py = 
+	wsgi.py = Relacionado ao servidor web. 
