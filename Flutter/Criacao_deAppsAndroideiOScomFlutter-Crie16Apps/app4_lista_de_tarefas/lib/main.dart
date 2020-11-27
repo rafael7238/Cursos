@@ -20,7 +20,33 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   List _toDoList = [];
+  Map<String, dynamic> valorExcluido;
+  int posicaoValorExcluido;
   TextEditingController toDoControoler = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _readData().then((value) {
+      setState(() {
+        _toDoList = json.decode(value);
+      });
+    });
+  }
+
+  Future<Null> _refresh() async {
+    await Future.delayed(Duration(milliseconds: 2));
+    setState(() {
+      _toDoList.sort((a, b) {
+        if (a["ok"] && !b["ok"])
+          return 1;
+        else if (!a["ok"] && b["ok"])
+          return -1;
+        else
+          return 0;
+      });
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -56,23 +82,13 @@ class _HomeState extends State<Home> {
               ),
             ),
             Expanded(
-              child: ListView.builder(
-                padding: EdgeInsets.only(top: 10.0),
-                itemBuilder: (context, index) {
-                  return CheckboxListTile(
-                      title: Text(_toDoList[index]["title"]) ?? Text("Nada"),
-                      onChanged: (bool value) {
-                        setState(() {
-                          _toDoList[index]["ok"] = value;
-                        });
-                      },
-                      value: _toDoList[index]["ok"] ?? true,
-                      secondary: CircleAvatar(
-                          child: Icon(_toDoList[index]["ok"]
-                              ? Icons.check
-                              : Icons.error)));
-                },
-                itemCount: _toDoList.length,
+              child: RefreshIndicator(
+                onRefresh: _refresh,
+                child: ListView.builder(
+                  padding: EdgeInsets.only(top: 10.0),
+                  itemBuilder: buildItem,
+                  itemCount: _toDoList.length,
+                ),
               ),
             )
           ],
@@ -82,13 +98,16 @@ class _HomeState extends State<Home> {
   }
 
   void _addToDo() {
-    setState(() {
-      Map<String, dynamic> newTodo = Map();
-      newTodo["title"] = toDoControoler.text;
-      toDoControoler.text = "";
-      newTodo["ok"] = false;
-      _toDoList.add(newTodo);
-    });
+    if (toDoControoler.text.isNotEmpty) {
+      setState(() {
+        Map<String, dynamic> newTodo = Map();
+        newTodo["title"] = toDoControoler.text;
+        toDoControoler.text = "";
+        newTodo["ok"] = false;
+        _toDoList.add(newTodo);
+        _saveData();
+      });
+    }
   }
 
   Future<File> _getFile() async {
@@ -110,5 +129,57 @@ class _HomeState extends State<Home> {
       print("Erro: ${e.toString()}");
       return null;
     }
+  }
+
+  Widget buildItem(BuildContext context, int index) {
+    return Dismissible(
+      onDismissed: (direcao) {
+        valorExcluido = Map.from(_toDoList[index]);
+        posicaoValorExcluido = index;
+        setState(() {
+          _toDoList.removeAt(index);
+        });
+        _saveData();
+
+        final snack = SnackBar(
+          content: Text("Tarefa ${valorExcluido["title"]} removido"),
+          action: SnackBarAction(
+            label: "Desfazer",
+            onPressed: () {
+              setState(() {
+                _toDoList.insert(posicaoValorExcluido, valorExcluido);
+                _saveData();
+              });
+            },
+          ),
+          duration: Duration(seconds: 2),
+        );
+
+        Scaffold.of(context).showSnackBar(snack);
+      },
+      direction: DismissDirection.startToEnd,
+      key: Key(DateTime.now().millisecondsSinceEpoch.toString()),
+      background: Container(
+        color: Colors.red,
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Icon(
+            Icons.delete,
+            color: Colors.white,
+          ),
+        ),
+      ),
+      child: CheckboxListTile(
+          title: Text(_toDoList[index]["title"]) ?? Text("Nada"),
+          onChanged: (bool value) {
+            setState(() {
+              _toDoList[index]["ok"] = value;
+              _saveData();
+            });
+          },
+          value: _toDoList[index]["ok"] ?? true,
+          secondary: CircleAvatar(
+              child: Icon(_toDoList[index]["ok"] ? Icons.check : Icons.error))),
+    );
   }
 }
