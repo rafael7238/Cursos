@@ -14,7 +14,7 @@ export default props => {
             function () {
                 const n = gerarNumero(props.min, props.max)
                 console.warn(n)
-                props.funcao(n,'Valor do carro')
+                props.funcao(n, 'Valor do carro')
             }
         } />
     )

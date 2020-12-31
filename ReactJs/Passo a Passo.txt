@@ -1,3 +1,0 @@
-npm cache verify
-npx create-react-app netflixclone
-npm start
