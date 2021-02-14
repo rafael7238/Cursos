@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { View, Text, TextInput, StyleSheet, Button, Alert } from 'react-native'
+import usersContexts from '../context/UsersContexts'
 
 
 
 export default props => {
 
     const [user, setUser] = useState(props.route.params ? props.route.params : [])
-
+    const { dispatch } = useContext(usersContexts)
     //  var params = props.route.params ? props.route.params : props.route
     //  console.warn(Object.keys(params))
     //   console.warn(params.id)
@@ -34,21 +35,28 @@ export default props => {
                 value={user.avatarUrl} />
 
             <Button title="Salvar" onPress={() => {
-                props.navigation.goBack()
+
+                dispatch({
+                    type: user.id ? 'updateUser' : 'createUser',
+                    payload: user,
+                })
+                //  props.navigation.goBack()
             }} />
-
-            <Button title="Excluir" color="red" onPress={()=>confirmDelete(user)}/>
-
+            { props.route.params ? <Button title="Excluir" color="red" onPress={() => confirmDelete(user)} /> : null}
         </View>
     )
 }
-  const confirmDelete = (user) => {
+const confirmDelete = (user) => {
     console.warn("Passou aqui")
     Alert.alert("Excluir Usuário", "Deseja Realmente Excluir o Usuário?", [
         {
             text: "Sim",
             onPress() {
-                console.warn("delete " + user.id)
+                // console.warn("delete " + user.id)
+                dispatch({
+                    type: 'deleteUser',
+                    payload: user,
+                })
             }
         },
         {
