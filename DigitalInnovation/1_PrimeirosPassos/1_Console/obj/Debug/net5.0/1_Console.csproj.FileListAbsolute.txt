@@ -1,0 +1,16 @@
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\bin\Debug\net5.0\1_Console.exe
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\bin\Debug\net5.0\1_Console.deps.json
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\bin\Debug\net5.0\1_Console.runtimeconfig.json
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\bin\Debug\net5.0\1_Console.runtimeconfig.dev.json
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\bin\Debug\net5.0\1_Console.dll
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\bin\Debug\net5.0\ref\1_Console.dll
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\bin\Debug\net5.0\1_Console.pdb
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\1_Console.csprojAssemblyReference.cache
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\1_Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\1_Console.AssemblyInfoInputs.cache
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\1_Console.AssemblyInfo.cs
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\1_Console.csproj.CoreCompileInputs.cache
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\1_Console.dll
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\ref\1_Console.dll
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\1_Console.pdb
+C:\Users\rafae\Documents\Curso\DigitalInnovation\1_PrimeirosPassos\1_Console\obj\Debug\net5.0\1_Console.genruntimeconfig.cache
