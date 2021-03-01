@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rafae\\Documents\\Curso\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\1_Console.csproj": {}
+    "C:\\Cursos\\Cursos\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\1_Console.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rafae\\Documents\\Curso\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\1_Console.csproj": {
+    "C:\\Cursos\\Cursos\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\1_Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rafae\\Documents\\Curso\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\1_Console.csproj",
+        "projectUniqueName": "C:\\Cursos\\Cursos\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\1_Console.csproj",
         "projectName": "1_Console",
-        "projectPath": "C:\\Users\\rafae\\Documents\\Curso\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\1_Console.csproj",
-        "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rafae\\Documents\\Curso\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\obj\\",
+        "projectPath": "C:\\Cursos\\Cursos\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\1_Console.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "C:\\Cursos\\Cursos\\DigitalInnovation\\1_PrimeirosPassos\\1_Console\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

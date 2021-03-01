@@ -1,0 +1,9 @@
+Capítulo 2 - 
+	Ao importar o arquivo, verificar se está no UTF-8 no campo Origem do Arquivo.
+	Verificar sempre as Configurações Regionais.
+	Drill Down  e Drill Up -> Utlizar gráfico de colunas.
+
+
+	WorkFlow -> Preparação dos Dados -> Modelagem dos Dados -> Visualização dos Dados.
+		     (Query Editor)	       (Data Viwer)		(Report Viewr)
+	
