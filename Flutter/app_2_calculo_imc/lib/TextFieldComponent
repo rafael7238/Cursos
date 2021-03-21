@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+
+Widget TextFormFieldComponent(){
+  return new TextFormField(
+    keyboardType: TextInputType.number,
+    decoration: InputDecoration(
+        labelText: "Peso em KG",
+        labelStyle: TextStyle(color: Colors.green)),
+    textAlign: TextAlign.center,
+    style: TextStyle(color: Colors.green, fontSize: 25.0),
+    controller: pesoController,
+    // The validator receives the text that the user has entered.
+    validator: (value) {
+      if (value.isEmpty) {
+        return 'Please enter some text';
+      }
+      return null;
+    },
+  );
+}

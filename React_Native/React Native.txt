@@ -1,5 +1,0 @@
-npm install -g expo-cli
-#iniciar um novo projeto
-expo init picpay 
-cd picpay
-npm start or npm web
