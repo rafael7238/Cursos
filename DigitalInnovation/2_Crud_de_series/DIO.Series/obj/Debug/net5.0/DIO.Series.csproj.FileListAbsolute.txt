@@ -1,5 +1,0 @@
-C:\Cursos\Cursos\DigitalInnovation\2_Crud_de_series\DIO.Series\obj\Debug\net5.0\DIO.Series.csprojAssemblyReference.cache
-C:\Cursos\Cursos\DigitalInnovation\2_Crud_de_series\DIO.Series\obj\Debug\net5.0\DIO.Series.GeneratedMSBuildEditorConfig.editorconfig
-C:\Cursos\Cursos\DigitalInnovation\2_Crud_de_series\DIO.Series\obj\Debug\net5.0\DIO.Series.AssemblyInfoInputs.cache
-C:\Cursos\Cursos\DigitalInnovation\2_Crud_de_series\DIO.Series\obj\Debug\net5.0\DIO.Series.AssemblyInfo.cs
-C:\Cursos\Cursos\DigitalInnovation\2_Crud_de_series\DIO.Series\obj\Debug\net5.0\DIO.Series.csproj.CoreCompileInputs.cache
