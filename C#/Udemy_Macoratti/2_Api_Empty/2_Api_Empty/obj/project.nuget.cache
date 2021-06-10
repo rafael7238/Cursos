@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "2Id5dtUdw1FZTRLh9nH/9dvfAQCJCztnHhQJY35zUVTpKRbhx8/Y4DplTjHUr0h5pD7YEp35jjYWTuuB6MreaA==",
+  "success": true,
+  "projectFilePath": "C:\\Cursos\\Cursos\\C#\\Udemy_Macoratti\\2_Api_Empty\\2_Api_Empty\\2_Api_Empty.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dell\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
