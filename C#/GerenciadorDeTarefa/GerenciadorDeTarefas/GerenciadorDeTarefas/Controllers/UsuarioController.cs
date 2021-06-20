@@ -1,6 +1,7 @@
 ﻿using GerenciadorDeTarefas.DTO;
 using GerenciadorDeTarefas.Model;
 using GerenciadorDeTarefas.Repository;
+using GerenciadorDeTarefas.Utils;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +25,7 @@ namespace GerenciadorDeTarefas.Controllers
 
         private readonly IUsuarioRepository _usuarioRepository;
 
-         public UsuarioController(ILogger<UsuarioController> logger, IUsuarioRepository usuarioRepository)
+        public UsuarioController(ILogger<UsuarioController> logger, IUsuarioRepository usuarioRepository)
         {
             _logger = logger;
             _usuarioRepository = usuarioRepository;
@@ -80,9 +81,16 @@ namespace GerenciadorDeTarefas.Controllers
                 }
 
                 if (string.IsNullOrEmpty(usuario.Email) || string.IsNullOrWhiteSpace(usuario.Email)
-    || usuario.Email.Length < 4 || obrigatorios.Any(e => usuario.Email.Contains(e)))
+    || usuario.Email.Length < 4 || !obrigatorios.Any(e => usuario.Email.Contains(e)))
                 {
                     erros.Add("Email Inválido");
+                }
+
+                usuario.Email = usuario.Email.ToLower();
+
+                if (_usuarioRepository.ExisteEmailCadastrao(usuario.Email))
+                {
+                    erros.Add("Já existe um e-mail cadastrado");
                 }
 
                 if (erros.Count() >= 1)
@@ -94,10 +102,11 @@ namespace GerenciadorDeTarefas.Controllers
                     });
                 }
 
+                usuario.Senha = MD5Hash.GerarHashMD5(usuario.Senha);
                 _usuarioRepository.Salvar(usuario);
 
                 // return Ok(usuario);
-                return Ok(new {msg="Usuário Criado com Sucesso" });
+                return Ok(new { msg = "Usuário Criado com Sucesso" });
 
             }
             catch (Exception e)

@@ -44,5 +44,6 @@ namespace ConsoleApp1._2___Estrutura_de_Controle
                 Console.Write(i + " ");
 
             }
+        }
     }
 }

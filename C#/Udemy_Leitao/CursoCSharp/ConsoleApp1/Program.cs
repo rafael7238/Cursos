@@ -32,6 +32,15 @@ namespace ConsoleApp1
                 {"2 - Sexto Programa -For", _6___For.Executar},
                 {"2 - Sétimo Programa - Foreach", _7___Foreach.Executar},
                 {"2 - Oitavo Programa - Break - Continue", _8___Break_Continue.Executar},
+                {"3 - Primeiro Programa - Método e Atributo", _3___Classes_e_Objets.Membro.Executar},
+                {"3 - Segundo Programa - Método Retorno", _3___Classes_e_Objets._4___MetodosComRetorno.Executar},
+                {"3 - Terceiro Programa - Static", _3___Classes_e_Objets._5___Static.Executar},
+                {"3 - Sétimo Programa - Parametros Nomeado", _3___Classes_e_Objets._7___Parametro_Nomeado.Executar},
+                {"3 - Oitavo Programa - Ref Out", _3___Classes_e_Objets._10___Ref_Out.Executar},
+
+
+
+
 
 
 
